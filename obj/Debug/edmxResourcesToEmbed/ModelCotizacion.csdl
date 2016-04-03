@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDCotizacionModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EntidadBDCotizacion" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Livianos" EntityType="BDCotizacionModel.Livianos" />
+  </EntityContainer>
+  <EntityType Name="Livianos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Codigo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Anno" Type="Int32" />
+    <Property Name="Tipo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Marca" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Modelo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Puertas" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Cilindros" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Combustible" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Transmision" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Equipo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Tasacion" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Permiso" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

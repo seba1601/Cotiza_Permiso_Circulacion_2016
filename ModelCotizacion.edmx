@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BDCotizacionModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="BDCotizacionModelStoreContainer">
+          <EntitySet Name="Livianos" EntityType="BDCotizacionModel.Store.Livianos" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="Livianos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Codigo" Type="nvarchar" MaxLength="100" />
+          <Property Name="Anno" Type="int" />
+          <Property Name="Tipo" Type="nvarchar" MaxLength="100" />
+          <Property Name="Marca" Type="nvarchar" MaxLength="100" />
+          <Property Name="Modelo" Type="nvarchar" MaxLength="100" />
+          <Property Name="Puertas" Type="nvarchar" MaxLength="100" />
+          <Property Name="Cilindros" Type="nvarchar" MaxLength="100" />
+          <Property Name="Combustible" Type="nvarchar" MaxLength="100" />
+          <Property Name="Transmision" Type="nvarchar" MaxLength="100" />
+          <Property Name="Equipo" Type="nvarchar" MaxLength="100" />
+          <Property Name="Tasacion" Type="nvarchar" MaxLength="100" />
+          <Property Name="Permiso" Type="nvarchar" MaxLength="100" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BDCotizacionModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EntidadBDCotizacion" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Livianos" EntityType="BDCotizacionModel.Livianos" />
+        </EntityContainer>
+        <EntityType Name="Livianos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Codigo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Anno" Type="Int32" />
+          <Property Name="Tipo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Marca" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Modelo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Puertas" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Cilindros" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Combustible" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Transmision" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Equipo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Tasacion" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Permiso" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BDCotizacionModelStoreContainer" CdmEntityContainer="EntidadBDCotizacion">
+          <EntitySetMapping Name="Livianos">
+            <EntityTypeMapping TypeName="BDCotizacionModel.Livianos">
+              <MappingFragment StoreEntitySet="Livianos">
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Anno" ColumnName="Anno" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Marca" ColumnName="Marca" />
+                <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+                <ScalarProperty Name="Puertas" ColumnName="Puertas" />
+                <ScalarProperty Name="Cilindros" ColumnName="Cilindros" />
+                <ScalarProperty Name="Combustible" ColumnName="Combustible" />
+                <ScalarProperty Name="Transmision" ColumnName="Transmision" />
+                <ScalarProperty Name="Equipo" ColumnName="Equipo" />
+                <ScalarProperty Name="Tasacion" ColumnName="Tasacion" />
+                <ScalarProperty Name="Permiso" ColumnName="Permiso" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Predeterminado" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
